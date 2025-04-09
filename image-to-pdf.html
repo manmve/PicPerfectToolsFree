@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image to PDF | PicPerfect Tools</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1b2a;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1b263b;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #4fc3f7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .back-link {
+      color: #4fc3f7;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    .tool-box {
+      background-color: #1b263b;
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(173, 216, 230, 0.1);
+    }
+
+    .tool-box p {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #cbd5e1;
+    }
+
+    .donation-box {
+      background-color: #0e1e3a;
+      color: #ffffff;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      margin-top: 3rem;
+      box-shadow: 0 0 15px rgba(173, 216, 230, 0.2);
+      text-align: center;
+    }
+
+    .donation-box a {
+      color: #4fc3f7;
+      text-decoration: underline;
+    }
+
+    .payment-methods ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .payment-methods li {
+      margin: 0.5rem 0;
+    }
+
+    button {
+      background-color: #4fc3f7;
+      color: #0e1e3a;
+      border: none;
+      border-radius: 6px;
+      padding: 4px 10px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #81d4fa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Image to PDF Tool</h1>
+  </header>
+
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="tool-box">
+      <h2>Coming Soon</h2>
+      <p>This tool will let you upload images and convert them to a single PDF in seconds.</p>
+    </div>
+
+    <div class="donation-box">
+      <h2>🙏 Happy with the result?</h2>
+      <p>
+        If this tool saved your time or made life easier, and you’re feeling generous, consider donating — purely voluntary.
+      </p>
+      <p>
+        Welcome to <strong>YTDK</strong> — <em>Your Tool Development Kitty</em> 💙
+      </p>
+      <p>
+        Whether it’s <strong>pence or pounds, cents or dollars, euro cents or euros, or paise or rupees</strong> — all contributions are warmly welcomed and deeply appreciated.
+      </p>
+
+      <div class="payment-methods">
+        <p><strong>Support via:</strong></p>
+        <ul>
+          <li>🇮🇳 <strong>GPay / PhonePe / UPI:</strong> <code id="upi">your-upi@upi</code> <button onclick="copyUPI()">📋 Copy</button></li>
+          <li>🌍 <strong>PayPal:</strong> <a href="https://paypal.me/yourlink" target="_blank">paypal.me/yourlink</a></li>
+          <li>💳 <strong>Card / Stripe:</strong> <em>Coming Soon</em></li>
+        </ul>
+      </div>
+
+      <p style="margin-top:1rem;"><em>Thank you for keeping the tools alive and growing! 🌱</em></p>
+    </div>
+  </div>
+
+  <script>
+    function copyUPI() {
+      const upiText = document.getElementById("upi").innerText;
+      navigator.clipboard.writeText(upiText).then(() => {
+        alert("UPI ID copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>
